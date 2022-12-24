@@ -45,7 +45,7 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp-mail.outlook.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('yash7232@outlook.com', 'tdqm6jn4')
+    server.login('yash7232@outlook.com', '*********')
     server.sendmail('yash7232@outlook.com', to, content)
     server.close()
 
@@ -79,9 +79,10 @@ if __name__=='__main__':
             strTime = datetime.datetime.now().strftime("%H:%M:%S")    
             speak(f"Sir, the time is {strTime}")
         
-        # elif 'open code' in query:
-        #     codePath = "C:\\Users\\Haris\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
-        #     os.startfile(codePath)
+        elif 'open code' in query:
+            codePath = "C:\\Users\\yash\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            os.startfile(codePath)
+
         elif 'send email' in query:
             try:
                 speak("What should I say?")
